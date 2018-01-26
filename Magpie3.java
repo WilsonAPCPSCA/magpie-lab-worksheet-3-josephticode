@@ -45,6 +45,19 @@ public class Magpie3
 		{
 			response = "Tell me more about your family.";
 		}
+		else if (findKeyword(statement, "school") >= 0)
+		{
+			response = "I hate school...";
+		}
+		else if (findKeyword(statement,"car" ) >= 0)
+		{
+			response = "I wish I could drive.";
+		}
+		else if (findKeyword(statement, "weather") >= 0)
+		{
+			response = "It's nice here where I live.";
+		}
+
 		else
 		{
 			response = getRandomResponse();
@@ -132,6 +145,7 @@ public class Magpie3
 	 */
 	private int findKeyword(String statement, String goal)
 	{
+		
 		return findKeyword(statement, goal, 0);
 	}
 
